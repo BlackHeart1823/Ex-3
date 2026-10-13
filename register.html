@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Registration Form</title>
+<style>
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Arial Black', Arial, sans-serif;
+        background: #fff4de; margin: 0; min-height: 100vh; padding: 40px 0;
+        display: flex; align-items: center; justify-content: center;
+    }
+    .card {
+        width: 420px; padding: 35px; background: #ffcf3f;
+        border: 4px solid #000; border-radius: 0;
+        box-shadow: 10px 10px 0 #000;
+    }
+    h2 {
+        text-align: center; text-transform: uppercase; letter-spacing: 1px;
+        background: #ff3d81; color: #fff; border: 4px solid #000;
+        padding: 12px; margin: -35px -35px 25px -35px;
+    }
+    label { display: block; margin-top: 14px; font-weight: bold; text-transform: uppercase; font-size: 12px; }
+    input[type="text"], input[type="password"], input[type="email"], input[type="tel"] {
+        width: 100%; padding: 10px; border: 3px solid #000; background: #fff;
+        font-family: inherit; outline: none;
+    }
+    input[type="submit"] {
+        width: 100%; margin-top: 22px; padding: 12px;
+        background: #2f6fed; color: #fff; border: 4px solid #000;
+        font-weight: bold; text-transform: uppercase; letter-spacing: 1px;
+        cursor: pointer; box-shadow: 5px 5px 0 #000;
+    }
+    input[type="submit"]:active { box-shadow: none; transform: translate(5px,5px); }
+</style>
+</head>
+<body>
+<div class="card">
+<h2>User Registration</h2>
+<form action="register.jsp" method="post">
+    <label>User Name</label>
+    <input type="text" name="username" required>
+    <label>Password</label>
+    <input type="password" name="password" required>
+    <label>Name</label>
+    <input type="text" name="name" required>
+    <label>Credit Card Number</label>
+    <input type="text" name="ccnumber" pattern="\d{13,19}" required>
+    <label>Email</label>
+    <input type="email" name="email" required>
+    <label>Phone Number</label>
+    <input type="tel" name="phone" pattern="[0-9]{10}" required>
+    <input type="submit" value="Register">
+</form>
+</div>
+</body>
+</html>
